@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마법사의 방 퀴즈 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div id="roof" class="clickable-object" data-quiz="roof"></div>
+        <div id="window" class="clickable-object" data-quiz="window"></div>
+        <div id="magic-book" class="clickable-object" data-quiz="book"></div>
+    </div>
+
+    <!-- 퀴즈 모달 -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="quiz-title"></h2>
+            <p id="quiz-question"></p>
+            <input type="text" id="quiz-answer" placeholder="정답을 입력하세요">
+            <button id="submit-answer">정답 확인</button>
+            <p id="quiz-result"></p>
+        </div>
+    </div>
+
+    <!-- ===== 추가된 부분: 성공 모달 ===== -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <h2>탈출 성공! 🎉</h2>
+            <p>모든 퀴즈를 해결하고 마법사의 방에서 탈출했습니다!</p>
+            <button id="restart-button">다시 시작</button>
+        </div>
+    </div>
+    <!-- ================================ -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
