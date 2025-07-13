@@ -11,6 +11,7 @@
         <div id="roof" class="clickable-object" data-quiz="roof"></div>
         <div id="window" class="clickable-object" data-quiz="window"></div>
         <div id="magic-book" class="clickable-object" data-quiz="book"></div>
+        <div id="minigame-trigger">👻</div>
     </div>
 
     <!-- 퀴즈 모달 -->
@@ -25,16 +26,33 @@
         </div>
     </div>
 
-    <!-- ===== 추가된 부분: 성공 모달 ===== -->
-    <div id="success-modal" class="modal">
+    <!-- 미니게임 모달 -->
+    <div id="minigame-modal" class="modal">
         <div class="modal-content">
-            <h2>탈출 성공! 🎉</h2>
-            <p>모든 퀴즈를 해결하고 마법사의 방에서 탈출했습니다!</p>
-            <button id="restart-button">다시 시작</button>
+            <span class="close-button">&times;</span>
+            <h2>미니게임: 유령 잡기!</h2>
+            <p>15초 안에 날아다니는 유령을 10번 클릭하세요!</p>
+            <div class="game-info">
+                <span>점수: <span id="game-score">0</span></span>
+                <span>남은 시간: <span id="game-time">15</span>초</span>
+            </div>
+            <div id="game-area">
+                <div id="game-target">👻</div>
+            </div>
+            <p id="game-result"></p>
+            <button id="start-game-button">게임 시작</button>
         </div>
     </div>
-    <!-- ================================ -->
 
+    <!-- ===== 수정된 부분: 엔딩 크레딧 컨테이너 ===== -->
+    <div id="ending-credit-container">
+        <div class="credit-content">
+            <p>제작</p>
+            <h1>박서준</h1>
+        </div>
+        <button id="restart-button">다시 시작</button>
+    </div>
+    <!-- ========================================== -->
 
     <script src="script.js"></script>
 </body>
